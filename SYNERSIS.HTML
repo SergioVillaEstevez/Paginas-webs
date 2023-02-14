@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="C:\Users\sergi\OneDrive\Escritorio\proyecto programacion\curso html\jquery-3.6.3.min.js"></script>
+<style>
+    body{
+        background-image:url("http://www.solofondos.com/wp-content/uploads/2015/11/21omxpw.jpg") ;
+    }
+    header{
+       
+        position: absolute;
+        margin-left: 20px;
+        font-family: monospace;
+        font-size: 25px;
+        color: beige;
+        
+
+    }
+    nav a{
+        color:beige;
+        
+    }
+    nav li{
+       
+        font-size: 30px;
+        font-family:cursive;
+        margin-left: 100px;
+        margin-top: 45px;
+        
+        list-style: none;
+        float: left;
+
+    }
+
+    #navegacion{
+
+        margin-left: 200px;
+    }
+    #logo{
+        
+        width: 300px;
+        height: 150px;
+        position: absolute;
+        margin-left: 1600px;
+        margin-top: 20px;
+
+    }
+    #video{
+        margin-left: 500px;
+        padding-top: 200px;
+        position: absolute;
+        
+        
+    }
+    #videito{
+        border: 5px solid red;
+    }
+    #texto1{
+
+        color:rgb(222, 175, 175);
+        position: absolute;
+        margin-top: 100px;
+        margin-left: 100px;
+        font-size: 80px;
+
+    }
+    #boton{
+        position: absolute;
+        margin-top: 750px;
+        margin-left: 800px;
+
+
+    }
+
+    #button{
+        background-color: rgb(121, 121, 121);
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color:black;
+        font-size: 30px;
+
+        position: absolute;
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        border:2px solid rgb(255, 252, 252);
+        
+        
+        
+        
+    
+    
+    }
+    header div a{
+        color: beige;
+        text-decoration: none;
+    }
+
+    #sobremi{
+        position: absolute;
+
+        text-align: center;
+        color: white;
+        font-size: 50px;
+
+    }
+    .marca{
+        margin-right: 150px;
+    }
+    #volver{
+        width: 200px;
+        height: 50px;
+        border-radius: 20px;
+        border: 2px solid red;
+        background-color: rgb(163, 151, 151);
+
+    }
+        
+
+</style>
+
+<script>
+
+    $(document).ready(function(){
+
+        $("#video").hide()
+        $("#sobremi").hide()
+
+        $("#button").click(function(){
+
+            $("#texto1").animate().fadeOut(500)
+
+            $("#video").animate().fadeIn(2000)
+
+            $("#button").animate().fadeOut(500)
+            $("#navegacion").animate().fadeOut(500)
+
+            
+
+        })
+
+        $("#volver").click(function(){
+
+            $("#sobremi").animate().fadeOut(1000)
+            
+            $("#padre").animate().fadeIn(2000)
+        })
+
+
+        $("#logo").click(function () {  
+
+                $("#padre").animate().fadeOut(1000)
+                $("#sobremi").animate().fadeIn(2000)
+
+
+
+        })
+
+
+
+        
+
+        $("#synersis").click(function(){
+
+            $("#video").animate().fadeOut(1000)
+
+            $("#texto1").animate().fadeIn(1000)
+            $("#navegacion").animate().fadeIn(1000)
+            $("#button").animate().fadeIn(1000)
+
+
+
+
+
+        })
+
+
+
+
+
+
+
+
+
+
+    })
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+<div id="padre">
+
+<header>
+    <div >
+    <a href="#" id="synersis"><H1>SYNERSIS.</H1></a>
+</div>
+</header>    
+        <div id="navegacion">
+
+        <nav id="navegacion">
+            <ul>
+                <a href="#"><li>Inicio</li></a>
+                <a href="#"><li>Directos</li></a>
+                <a href="#"><li>Comunidad</li></a>
+                <a href="#"><li>E-sports</li></a>
+            </ul>
+
+        </nav>
+</div>
+
+<div id="logo">
+    <a href="#"><img src="C:\Users\sergi\OneDrive\Imágenes\logo pablo.png" alt="logo" width="300" id="logito"></a>
+</div>
+
+    <div id="video">
+
+        <video src="C:\Users\sergi\OneDrive\Imágenes\TRABAJO FINAL PABLO 3.mp4" controls autoplay width="900"  id="videito"></video>
+    </div>
+
+    <div id="texto1">
+           <h2> <strong>MIRA ESTE TRAILER, </strong><br>  LO QUE TE ESPERA, <br>NO LO IMAGINAS.</h2>
+
+    </div>
+
+    <div id="boton">
+
+        <input type="button" value="¿PREPARADO?" id="button">
+    </div>
+
+
+
+    
+
+
+
+</div>
+    <div id="sobremi">
+   
+
+        <h1 class="marca"> MARCA</h1>
+
+        <p>LA IDEA DE ESTA MARCA ES LLEGAR A LOS JOVENES QUE QUIEREN VER UNA DISTINTA IDEA DE DE TWITCH,YOUTUBE, ALGO QUE REVOLUCIONE EL MERCADO ACTUAL <br>
+         IMPRESIONAR CON LOS SERVICIOS QUE PODEMOS DAR, ESTA EMPRESA SE INICIO EN 2022, POR UNA IDEA QUE SE NECESITABA DAR MUCHAS VUELTAS YA QUE TENIA MUCHAS ERRATAS <br>
+        </p>
+
+        <input type="button" value="VOLVER" id="volver">
+
+        
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>
